@@ -1,0 +1,67 @@
+.purchased-title {
+  font-size: 1rem;
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.toggle {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  margin-left: 5px;
+  text-indent: -9999px;
+  width: 50px;
+  height: 25px;
+  border-radius: 25px;
+  background-color: gray;
+  border: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.toggle::after {
+  content: '';
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 28px;
+}
+
+.toggle.active {
+  background: crimson;
+}
+
+.toggle.active::after {
+  right: 4px;
+}
+
+.purchased-numbers {
+  border: 1px solid #d4d4d4;
+  padding: 5px 12px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+.purchased-numbers span {
+  vertical-align: middle;
+  font-size: 2.25rem;
+  margin-right: 10px;
+}
+
+.purchased-numbers li {
+  margin: 0;
+  display: inline-block;
+}
+
+.purchased-numbers.active li {
+  display: block;
+}

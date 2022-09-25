@@ -1,0 +1,53 @@
+.winning-number {
+  width: 500px;
+  text-align: center;
+  box-shadow: 0 3px 10px 3px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin-top: 2rem;
+  border-radius: 5px;
+}
+
+.winning-number ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.winning-number li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  background: peachpuff;
+  border-radius: 50%;
+}
+
+.winning-number li:hover {
+  border: 2px solid crimson;
+}
+
+.winning-number input {
+  display: block;
+  margin: 0 auto;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 10px;
+  color: crimson;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.winning-number button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  border: none;
+  background: crimson;
+  color: white;
+  width: 350px;
+  padding: 10px 0;
+  border-radius: 5px;
+  cursor: pointer;
+}

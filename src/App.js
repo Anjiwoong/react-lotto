@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import LottoForm from './components/LottoForm';
+import LottoInfo from './components/LottoInfo';
 
-function App() {
+const App = () => {
+  const [showLottoInfo, setShowLottoInfo] = useState(false);
+
+  const showLottoInfoHandler = state => {
+    setShowLottoInfo(state);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>🎱 행운의 로또</h1>
+      <LottoForm onShowLottoInfo={showLottoInfoHandler} />
+      {showLottoInfo && <LottoInfo />}
+    </>
   );
-}
+};
 
 export default App;
