@@ -5,9 +5,7 @@ import LottoInfo from './components/LottoInfo';
 const App = () => {
   const [showLottoInfo, setShowLottoInfo] = useState(false);
 
-  const showLottoInfoHandler = state => {
-    setShowLottoInfo(state);
-  };
+  const showLottoInfoHandler = state => setShowLottoInfo(state);
 
   return (
     <>

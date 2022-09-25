@@ -1,20 +1,21 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 
 import styles from './PurchasedLotto.module.css';
+import LottoContext from './store/lotto-context';
 
 const PurchasedLotto = () => {
   const [showNumber, setShowNumber] = useState(false);
 
-  const showNumberHandler = () => {
-    setShowNumber(prev => !prev);
-  };
+  const ctx = useContext(LottoContext);
+
+  const showNumberHandler = () => setShowNumber(prev => !prev);
 
   const isActive = showNumber ? styles.active : '';
 
   return (
     <>
       <div className={styles['purchased-title']}>
-        <p>총 1개를 구매하였습니다.</p>
+        <p>총 {ctx.lottoCount}개를 구매하였습니다.</p>
         <div>
           <span>번호보기</span>
           <button
@@ -26,14 +27,12 @@ const PurchasedLotto = () => {
         </div>
       </div>
       <ul className={`${styles['purchased-numbers']} ${isActive}`}>
-        <li>
-          <span>🎟️</span>
-          {showNumber && '10 30 10 20 20 20'}
-        </li>
-        <li>
-          <span>🎟️</span>
-          {showNumber && '10 30 10 20 20 20'}
-        </li>
+        {ctx.lottos.lottoNumbers.map(lotto => (
+          <li key={lotto.id}>
+            <span>🎟️</span>
+            {showNumber && lotto.number.join(' ')}
+          </li>
+        ))}
       </ul>
     </>
   );
