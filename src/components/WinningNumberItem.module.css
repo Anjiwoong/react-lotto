@@ -1,0 +1,18 @@
+.winning-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  background: peachpuff;
+  border-radius: 50%;
+}
+
+.winning-number.selected {
+  background: crimson;
+  color: white;
+}
+
+.winning-number:hover {
+  border: 2px solid crimson;
+}

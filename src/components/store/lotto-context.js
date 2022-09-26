@@ -5,6 +5,8 @@ const LottoContext = React.createContext({
   lottoCount: 0,
   setCount: state => {},
   addLotto: state => {},
+  selectedLotto: state => {},
+  addBonusNumber: state => {},
 });
 
 export default LottoContext;

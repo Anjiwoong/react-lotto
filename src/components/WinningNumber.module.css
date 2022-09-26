@@ -13,20 +13,6 @@
   gap: 10px;
 }
 
-.winning-number li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 35px;
-  height: 35px;
-  background: peachpuff;
-  border-radius: 50%;
-}
-
-.winning-number li:hover {
-  border: 2px solid crimson;
-}
-
 .winning-number input {
   display: block;
   margin: 0 auto;
@@ -36,6 +22,12 @@
   color: crimson;
   font-size: 1.2rem;
   text-align: center;
+}
+
+.winning-number input::-webkit-outer-spin-button,
+.winning-number input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .winning-number button {

@@ -11,7 +11,7 @@ const App = () => {
     <>
       <h1>🎱 행운의 로또</h1>
       <LottoForm onShowLottoInfo={showLottoInfoHandler} />
-      {showLottoInfo && <LottoInfo />}
+      {showLottoInfo && <LottoInfo onShowLottoInfo={showLottoInfoHandler} />}
     </>
   );
 };
