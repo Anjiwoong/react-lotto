@@ -6,7 +6,6 @@ import styles from './WinningNumberItem.module.css';
 const WinningNumberItem = props => {
   const [toggle, setToggle] = useState(false);
 
-  // 전역관리하는 배열로 데이터를 보내고 거기서 만든 배열을 바로 받아서 사용하자나.
   const ctx = useContext(LottoContext);
 
   const selectNumberHandler = e => {

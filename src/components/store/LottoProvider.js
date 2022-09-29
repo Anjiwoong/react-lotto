@@ -56,7 +56,7 @@ const lottoReducer = (state, action) => {
 };
 
 const LottoProvider = props => {
-  // const [reset, setReset] = useState(false);
+  const [reset, setReset] = useState(false);
   const [lottoCount, setLottoCount] = useState(0);
 
   const [lottos, dispatchLottos] = useReducer(lottoReducer, defaultLottoState);
@@ -69,15 +69,20 @@ const LottoProvider = props => {
 
   const addBonusNumber = num => dispatchLottos({ type: 'BONUS', item: num });
 
-  const resetLotto = () => dispatchLottos({ type: 'RESET' });
+  const resetLotto = () => {
+    setReset(true);
+    dispatchLottos({ type: 'RESET' });
+  };
 
   return (
     <LottoContext.Provider
       value={{
         lottos: lottos,
         lottoCount: lottoCount,
+        reset: reset,
         setCount: setCount,
         addLotto: addLotto,
+        setReset: setReset,
         selectedLotto: selectedLotto,
         addBonusNumber: addBonusNumber,
         resetLotto: resetLotto,

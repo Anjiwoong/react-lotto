@@ -1,0 +1,13 @@
+.table {
+  display: table;
+  border-collapse: collapse;
+  border: 3px solid crimson;
+  font-size: 1.2rem;
+  margin: 0 auto;
+}
+
+.table th,
+.table td {
+  padding: 1rem;
+  border-bottom: 1px solid crimson;
+}

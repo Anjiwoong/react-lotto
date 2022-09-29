@@ -25,35 +25,3 @@
 .modal h1 {
   width: auto;
 }
-
-.modal table {
-  display: table;
-  border-collapse: collapse;
-  border: 3px solid crimson;
-  font-size: 1.2rem;
-  margin: 0 auto;
-}
-
-.modal th,
-.modal td {
-  padding: 1rem;
-  border-bottom: 1px solid crimson;
-}
-
-.modal .replay {
-  border-radius: 5px;
-  background: crimson;
-  color: white;
-  border: none;
-  width: 120px;
-  padding: 12px 0;
-  cursor: pointer;
-  margin-top: 1.5rem;
-}
-
-.close {
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  font-size: 1.2rem;
-}
